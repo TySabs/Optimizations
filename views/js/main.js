@@ -501,9 +501,19 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
-  var items = document.querySelectorAll('.mover');
-  for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
+  var items = document.getElementsByClassName("mover"),
+      cachedItemsLength = items.length,
+      top = document.body.scrollTop;
+      pizzaPositions = [];
+
+  // calculate pizza positions and push them into pizzaPositions array
+  for (i = 0; i < cachedItemsLength; i++) {
+    pizzaPositions.push(Math.sin((top / 1250) + (i % 5)));
+  }
+
+  // restyle pizzas based on pizzaPositions array
+  for (i = 0; i < cachedItemsLength; i++) {
+    var phase = pizzaPositions[i];
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
 
