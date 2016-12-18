@@ -528,9 +528,9 @@ document.addEventListener('DOMContentLoaded', function() {
       s = 256,
       cols = 8,
       rows = (windowHeight / s),
-      movingPizzas = document.getElementById("movingPizzas1"), // moving pizzas
-      movingPizzaCount = Math.ceil(rows * cols), // calculates amount of moving pizzas
-      pizzasDiv = document.getElementById("randomPizzas"), // specialty pizzas
+      movingPizzas = document.getElementById("movingPizzas1"),
+      movingPizzaCount = Math.ceil(rows * cols),
+      pizzasDiv = document.getElementById("randomPizzas"),
       elem;
 
   // This for-loop actually creates and appends all of the pizzas when the page loads
@@ -539,10 +539,12 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // This for-loop creates the moving pizzas and appends them to the page
-  for (i = 0; i < movingPizzaCount; i++) {
+  for (var i = 0; i < movingPizzaCount; i++) {
     elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza_mover.png";
+    elem.style.height = "100px";
+    elem.style.width = "73px";
     elem.basicLeft = (i % cols) * s;
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
     movingPizzas.appendChild(elem);
