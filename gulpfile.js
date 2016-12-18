@@ -37,4 +37,4 @@ gulp.task('mainImages', function() {
 
 
 
-gulp.task('default', ['pizzaCSS', 'pizzaImages', 'mainImages']);
+gulp.task('default', ['pizzaCSS', 'mainCSS', 'pizzaImages', 'mainImages']);
