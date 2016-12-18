@@ -43,5 +43,4 @@ gulp.task('pizzaJS', function() {
 });
 
 
-
 gulp.task('default', ['pizzaCSS', 'mainCSS', 'pizzaImages', 'mainImages', 'pizzaJS']);
