@@ -22,4 +22,5 @@ View the pizza page: [Pizzeria Mama Mia](https://tysabs.github.io/Optimizations/
 * All variables that do calculations had definitions moved outside 'for loops' (thus caching this value instead of calculating value repeatedly)
 * Refactored ```changePizzaSizes()``` using switch statement and move randomPizzas array definition outside of the 'for loop' to fix pizza slider
 * Refactored ```updatePositions()``` to do calculations for pizza positions in a second outside 'for loop' to improve moving background pizzas
+* Reduce number of moving pizzas generated so that only the amount needed to fill the screen will be created
 * Minify main.js script with gulp-uglify
