@@ -19,6 +19,7 @@ input {
 
 form {
   display: inline-block;
+  margin-bottom: 4px;
 }
 
 .centered {
