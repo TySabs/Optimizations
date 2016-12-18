@@ -1,7 +1,7 @@
 # Website Performance Optimization Portfolio Project
 
 ## Getting started
-### View Offline0
+### View Offline
 [Clone the repository](https://github.com/TySabs/Optimizations.git) and open index.html in your web browser.
 
 ### View Online
