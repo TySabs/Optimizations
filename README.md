@@ -1,11 +1,11 @@
 # Website Performance Optimization Portfolio Project
 
 ## Getting started
-### View Offline
+### View Offline0
 [Clone the repository](https://github.com/TySabs/Optimizations.git) and open index.html in your web browser.
 
 ### View Online
-View the portfolio page: [Cam's Portfolio](https://github.com/TySabs/Optimizations)
+View the portfolio page: [Cam's Portfolio](https://tysabs.github.io/Optimizations/)
 
 View the pizza page: [Pizzeria Mama Mia](https://tysabs.github.io/Optimizations/views/pizza.html)
 
