@@ -18,7 +18,7 @@ View the pizza page: [Pizzeria Mama Mia](https://tysabs.github.io/Optimizations/
 * Images were optimized for intended width and then compressed with gulp-imagemin
 
 ### Fixes to main.js for pizza.html
-* Replaced all instances ```document.querySelectorAll()``` with ```document.getElementById()``` or ```document.getElementsByClassName()```
+* Replaced all instances of ```document.querySelectorAll()``` with ```document.getElementById()``` or ```document.getElementsByClassName()```
 * All variables that do calculations had definitions moved outside 'for loops' (thus caching this value instead of calculating value repeatedly)
 * Refactored ```changePizzaSizes()``` using switch statement and move randomPizzas array definition outside of the 'for loop' to fix pizza slider
 * Refactored ```updatePositions()``` to do calculations for pizza positions in a second outside 'for loop' to improve moving background pizzas
