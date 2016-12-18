@@ -1,0 +1,19 @@
+{
+  "name": "optimizations",
+  "version": "1.0.0",
+  "description": "A portfolio website that needs its performance optimized.",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TySabs/Optimizations"
+  },
+  "author": "Ty Sabs",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7"
+  }
+}
