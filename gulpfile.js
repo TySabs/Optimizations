@@ -3,9 +3,12 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     cleanCSS = require('gulp-clean-css');
+    imagemin = require('gulp-imagemin');
 
 
 var pizzaStyles = 'views/css/dev/*.css';
+var pizzaImages = 'views/images/dev/*';
+var mainImages = 'img/dev/*';
 
 gulp.task('pizzaCSS', function() {
   gulp.src(pizzaStyles)
@@ -13,17 +16,18 @@ gulp.task('pizzaCSS', function() {
     .pipe(gulp.dest('views/css/production/'))
 });
 
-gulp.task('devJs', function() {
-  gulp.src(jsSources)
-    .pipe(concat('app.dev6.js'))
-    .pipe(gulp.dest('js/'))
+gulp.task('pizzaImages', function() {
+  gulp.src(pizzaImages)
+    .pipe(imagemin())
+    .pipe(gulp.dest('views/images/'))
 });
 
-gulp.task('liveJs', function() {
-  gulp.src(jsSources)
-    .pipe(concat('app.min6.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('js/'))
+gulp.task('mainImages', function() {
+  gulp.src(mainImages)
+    .pipe(imagemin())
+    .pipe(gulp.dest('img/'))
 });
 
-gulp.task('default', ['devJs', 'liveJs']);
+
+
+gulp.task('default', ['pizzaCSS', 'pizzaImages', 'mainImages']);
