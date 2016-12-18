@@ -340,15 +340,15 @@ var makeRandomPizza = function() {
   var numberOfNonMeats = Math.floor((Math.random() * 3));
   var numberOfCheeses = Math.floor((Math.random() * 2));
 
-  for (var i = 0; i < numberOfMeats; i++) {
+  for (i = 0; i < numberOfMeats; i++) {
     pizza = pizza + ingredientItemizer(selectRandomMeat());
   }
 
-  for (var j = 0; j < numberOfNonMeats; j++) {
+  for (j = 0; j < numberOfNonMeats; j++) {
     pizza = pizza + ingredientItemizer(selectRandomNonMeat());
   }
 
-  for (var k = 0; k < numberOfCheeses; k++) {
+  for (k = 0; k < numberOfCheeses; k++) {
     pizza = pizza + ingredientItemizer(selectRandomCheese());
   }
 
@@ -446,7 +446,7 @@ var resizePizzas = function(size) {
         randomPizzasLength = randomPizzas.length - 1; // cache randomPizzas.length
 
     // Set all the pizza's width to the appropriate pizza size
-    for (var i = 0; i < randomPizzasLength; i++) {
+    for (i = 0; i < randomPizzasLength; i++) {
       randomPizzas[i].style.width = newWidth + "%";
     }
   }
@@ -476,7 +476,7 @@ var frame = 0;
 function logAverageFrame(times) {   // times is the array of User Timing measurements from updatePositions()
   var numberOfEntries = times.length;
   var sum = 0;
-  for (var i = numberOfEntries - 1; i > numberOfEntries - 11; i--) {
+  for (i = numberOfEntries - 1; i > numberOfEntries - 11; i--) {
     sum = sum + times[i].duration;
   }
   console.log("Average scripting time to generate last 10 frames: " + sum / 10 + "ms");
@@ -539,7 +539,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // This for-loop creates the moving pizzas and appends them to the page
-  for (var i = 0; i < movingPizzaCount; i++) {
+  for (i = 0; i < movingPizzaCount; i++) {
     elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza_mover.png";
