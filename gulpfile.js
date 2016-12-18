@@ -7,6 +7,7 @@ var gulp = require('gulp'),
 
 
 var pizzaStyles = 'views/css/dev/*.css';
+var mainStyles = 'css/dev/*.css';
 var pizzaImages = 'views/images/dev/*';
 var mainImages = 'img/dev/*';
 
@@ -14,6 +15,12 @@ gulp.task('pizzaCSS', function() {
   gulp.src(pizzaStyles)
     .pipe(cleanCSS())
     .pipe(gulp.dest('views/css/production/'))
+});
+
+gulp.task('mainCSS', function() {
+  gulp.src(mainStyles)
+    .pipe(cleanCSS())
+    .pipe(gulp.dest('css/production/'))
 });
 
 gulp.task('pizzaImages', function() {
