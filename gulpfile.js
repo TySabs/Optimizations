@@ -6,10 +6,11 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin');
 
 
-var pizzaStyles = 'views/css/dev/*.css';
-var mainStyles = 'css/dev/*.css';
-var pizzaImages = 'views/images/dev/*';
-var mainImages = 'img/dev/*';
+var pizzaStyles = 'views/css/dev/*.css',
+    mainStyles = 'css/dev/*.css',
+    pizzaImages = 'views/images/dev/*',
+    mainImages = 'img/dev/*',
+    pizzaJS = 'views/js/dev/main.js';
 
 gulp.task('pizzaCSS', function() {
   gulp.src(pizzaStyles)
@@ -35,6 +36,12 @@ gulp.task('mainImages', function() {
     .pipe(gulp.dest('img/'))
 });
 
+gulp.task('pizzaJS', function() {
+  gulp.src(pizzaJS)
+    .pipe(uglify())
+    .pipe(gulp.dest('views/js/'))
+});
 
 
-gulp.task('default', ['pizzaCSS', 'mainCSS', 'pizzaImages', 'mainImages']);
+
+gulp.task('default', ['pizzaCSS', 'mainCSS', 'pizzaImages', 'mainImages', 'pizzaJS']);
